@@ -44,13 +44,14 @@ def reverse_list(list, previous=nil)
     
     stack = Stack.new
 
-    if list
+    while list
         next_node = list.next_node
         stack.push(list.value)
 
         list = list.next_node
-        
-    else
+    end    
+    
+    if previous
         next_node = previous.next_node
 
         previous = previous.next_node
